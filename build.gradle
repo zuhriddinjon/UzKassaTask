@@ -1,13 +1,31 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = "1.5.0"
+    ext {
+        kotlin_version = "1.5.0"
+        hilt_version = "2.38"
+        retrofit_version = "2.9.0"
+        okhttp3Version = "4.9.1"
+        glide_version = "4.12.0"
+        room_version = "2.3.0"
+        chucker_version = "3.4.0"
+        navigation_version = "2.4.0-alpha05"
+        lifecycle_version = "2.3.1"
+        fragment_version = "1.4.0-alpha05"
+        build_gradle_version = "4.2.2"
+    }
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.2.1"
+        classpath "com.android.tools.build:gradle:$build_gradle_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        //dagger-hilt
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
+
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.4.0-alpha05"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -19,6 +37,7 @@ allprojects {
         google()
         mavenCentral()
         jcenter() // Warning: this repository is going to shut down soon
+        maven { url 'https://jitpack.io' }
     }
 }
 

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="uz.instat.uzkassatask">
+    package="uz.instat.uzkassatask" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -8,11 +11,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.UzKassaTask">
+        android:name=".NewsApp"
+        android:theme="@style/Theme.UzKassaTask" >
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.UzKassaTask.NoActionBar">
+            android:theme="@style/Theme.UzKassaTask.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
